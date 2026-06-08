@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+char nome[50];
+float n1, n2, media;
+    printf("Digite o seu nome: ");
+    scanf("%s", nome);
+    printf("%s, digite as notas das 2 provas para saber sua media: ", nome);
+    scanf("%f %f", &n1, &n2);
+    media = (n1+n2)/2;
+    if(media >= 7){
+        printf("Parabéns %s, sua média é %.2f, você está Aprovado!!", nome, media);
+    }
+    else if(media >= 5 && media <= 6.9){
+        printf("%s, sua media é %.2f sinto em lhe informar, mas você está de Recuperação!", nome, media);
+    }
+    else if(media < 5){
+        printf("%s, sua media é %.2f sinto em lhe informar, mas você está Reprovado", nome, media);
+    }
+    return 0;
+}
